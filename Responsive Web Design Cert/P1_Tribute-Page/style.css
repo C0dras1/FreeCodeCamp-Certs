@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #36393B;
+  background-color: #E5FCF5;
+}
+
+/* Main container grid */
+.container {
+  display: grid;
+  width: 95%;
+  padding: 0;
+  margin: 0 2.5%;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto 2fr auto;
+  grid-template-areas: 
+    ". header ."
+    ". img ."
+    ". tribute .";
+  background-color: #FEFFFE;
+}
+
+
+/* header grid item */
+.header-div {
+  grid-area: header;
+}
+
+/* img grid item */
+.img-div {
+  grid-area: img;
+}
+
+/* tribute grid item */
+.tribute-div {
+  grid-area: tribute;
+}
+
+/* header grid container */
+.header-div {
+  display: grid;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  line-height: 200%;
+  margin: 20px 0;
+}
+
+h1,
+h3 {
+  color: #E53D00;
+}
+
+#title,
+p {
+  justify-self: center;
+}
+
+/* img grid container */
+.img-div {
+  display: grid;
+  width: 100%;
+}
+
+img {
+  max-width: 95%;
+  justify-self: center;
+  margin: 0;
+}
+figcaption {
+  justify-self: center;
+  width: 90%;
+  font-size: 0.7em;
+}
+
+/* tribute div */
+
+.tribute-div {
+  display: grid;
+}
+
+h3 {
+  justify-self: center;
+  align-self: center;
+  margin: 30px 0 20px 0;
+}
+
+ul {
+  width: 100%;
+  padding: 0 10%;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+  figcaption {width: 70%;}
+  ul {padding: 0 15%;}
+}
+
+@media only screen and (min-width: 900px) {
+  figcaption {width: 60%;}
+  ul {padding: 0 20%;}
+}
+
+@media only screen and (min-width: 1020px) {
+  figcaption {width: 50%;}
+  ul {padding: 0 25%;}
+}
+
+@media only screen and (min-width: 1200px) {
+  figcaption {width: 40%;}
+  ul {padding: 0 30%;}
+}
+
+@media only screen and (min-width: 1560px) {
+  figcaption {width: 35%;}
+  ul {padding: 0 35%;}
+}
+
+
