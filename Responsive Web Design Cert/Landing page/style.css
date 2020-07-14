@@ -35,7 +35,7 @@ header {
   height: 10vh;
   align-content: center;
   background-color: var(--green-theme);
-  position: relative;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100vw;
