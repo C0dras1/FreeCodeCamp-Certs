@@ -1,7 +1,8 @@
 :root {
   --green-theme: rgba(52, 251, 95, 0.65);
   --green-darker: rgba(47, 231, 87, 0.65);
-  --green-light-BG: rgba(191, 255, 205, 0.376);
+  --green-light-BG: rgba(191, 255, 205, 0.972);
+  --green-lighter-BG: rgba(219, 255, 227, 0.938);
   --green-text-header: rgb(32, 155, 59);
 }
 
@@ -11,12 +12,12 @@
   box-sizing: border-box;
 }
 
-.landing-section {
+#landing-section {
   height: 100vh;
   background: linear-gradient(
     rgba(0, 0, 0, 0.3),
     rgba(0, 0, 0, 0.3)
-  ), url("markus-spiske-vrbZVyX2k4I-unsplash.jpg") fixed;
+  ), url("markus-spiske-vrbZVyX2k4I-unsplash.jpg") center fixed;
   object-fit: cover;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -26,11 +27,10 @@
 /* NAV BAR */
 header {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 3fr;
   height: 10vh;
   align-content: center;
   background-color: var(--green-theme);
-  
 }
 
 ul {
@@ -41,7 +41,16 @@ ul {
 
 a {
   text-decoration: none;
-  color: rgb(46, 46, 46);
+  text-transform: uppercase;
+  color: rgb(95, 95, 95);
+  font-weight: 600;
+  padding-bottom: 6px;
+}
+
+a:hover,
+a:active {
+  border-bottom: 1px solid rgb(95, 95, 95);
+  padding-bottom: 5px;
 }
 
 /* CTA SECTION */
@@ -67,6 +76,7 @@ h1 {
   font-size: 0.5em;
   letter-spacing: -5px;
 }
+
 button {
   padding: 0.8em;
   background-color: var(--green-theme);
@@ -88,16 +98,160 @@ button:active {
 
 /* VIDEO SECTION */
 
-#video-section {
+#set-up {
   height: 80vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   background-color: var(--green-light-BG);
 }
 
-#video-section h2 {
+#set-up h2 {
   color: var(--green-text-header);
-  font-size: 2em;
+  font-size: 3em;
+  writing-mode: vertical-rl;
+  border-bottom: 5px solid var(--green-text-header);
+  border-top: 5px solid var(--green-text-header);
+  padding: 50px 0;
 }
+
+/* FEATURE SECTION */
+#features {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1em;
+  background-color: #fff;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10%;
+  justify-content: space-around;
+  height: 300px;
+  justify-items: center;
+}
+
+
+ion-icon {
+  font-size: 4em;
+  align-self: center;
+  color: var(--green-text-header);
+}
+
+.feature-text {
+  align-self: center;
+}
+
+.feature-text h2 {
+  margin-bottom: 0.5em;
+}
+
+.feature-text p {
+  color: rgb(95, 95, 95);
+}
+
+/* FORM */
+
+form {
+  height: 30vh;
+  background-color: rgb(95, 95, 95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form * {
+  width: 45%;
+  margin-top: 1em;
+}
+
+label {
+  text-align: center;
+  color: #fff;
+  font-size: 1.8em;
+}
+
+input {
+  padding: 0.5em;
+}
+
+input[type="email"] {
+  background-color: var(--green-lighter-BG);
+  border: none;
+}
+
+input[type="submit"] {
+  background-color: var(--green-text-header);
+  border: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 770px) {
+  #landing-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  #set-up {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr 3fr;
+    width: 100vw;
+  }
+
+  #set-up h2 {
+    grid-row: 1 / 2;
+    writing-mode: horizontal-tb;
+    padding: 0;
+    border: none;
+    justify-self: center;
+  }
+  #video {
+    width: 500px;
+    height: 300px;
+  }
+
+}
+
+@media screen and (max-width: 570px) {
+  header {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #CTA {
+    grid-row: span 2;
+    grid-column: span 2;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #video {
+    width: 300px;
+  }
+}
+
+
+
+/* #set-up {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--green-light-BG);
+}
+
+#set-up h2 {
+  color: var(--green-text-header);
+  font-size: 3em;
+  writing-mode: vertical-rl;
+  border-bottom: 5px solid var(--green-text-header);
+  border-top: 5px solid var(--green-text-header);
+  padding: 50px 0;
+} */

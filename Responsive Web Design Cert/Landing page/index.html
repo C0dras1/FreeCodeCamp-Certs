@@ -12,30 +12,57 @@
     <img src="" alt="" id="header-img">
     <nav id="nav-bar">
       <ul>
-        <a href="#"><li>Set Up</li></a>
-        <a href="#"><li>Features</li></a>
-        <a href="#"><li>Newsletter</li></a>
+        <a href="#set-up"><li>Set Up</li></a>
+        <a href="#features"><li>Features</li></a>
+        <a href="#Newsletter"><li>Newsletter</li></a>
       </ul>
     </nav>
   </header>
 
-  <div class="landing-section">
+  <div id="landing-section">
     <div id="CTA">
       <h1>Click <span id="sideways-text">AND</span> Grow</h1>
       <button href="#">Learn More</button>
     </div>
   </div>
 
-  <div id="video-section">
+  <div id="set-up">
+    <iframe id="video" width="707px" height="402px" src="https://www.youtube.com/embed/dCIFt8qNT3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <h2>Set up</h2>
-    <iframe id="video" width="707" height="398" src="https://www.youtube.com/embed/dCIFt8qNT3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
-  <form action="submit">
+  <div id="features">
+    <div class="feature">
+      <ion-icon name="cash"></ion-icon>
+      <div class="feature-text">
+        <h2>90 Day Money Back guarantee</h2>
+        <p>We stand behind the quality of all our products. If you are not 100% satisfied, we will provide your money back within 90 days, no questions asked!</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <ion-icon name="airplane"></ion-icon>
+      <div class="feature-text">
+        <h2>Fast Shipping</h2>
+        <p>We make sure you can start planting as soon as possible. We also provide free returns if you are not 100% satisfied.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <ion-icon name="shield-checkmark"></ion-icon>
+      <div class="feature-text">
+        <h2>Quality Assurance</h2>
+        <p>All our products are individually tested in our patented autonomous process.</p>
+      </div>
+    </div>
+  </div>
+
+  <form action="submit" id="Newsletter">
     <label>Sign up for our newsletter!</label>
     <input type="email" name="email" id="email" placeholder="Please enter your Email">
     <input type="submit" value="Sign Up">
   </form>
 
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 </body>
 </html>
