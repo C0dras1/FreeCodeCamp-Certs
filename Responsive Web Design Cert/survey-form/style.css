@@ -6,12 +6,19 @@
 
 main {
   width: 100vw;
-  margin: 0 auto;
+  background-image: 
+    linear-gradient(
+      rgba(99, 49, 238, 0.85),
+      rgba(99, 49, 238, 0.85)
+    ),
+    url("corinne-kutz-tMI2_-r5Nfo-unsplash.jpg");
 }
+
 
 h1,p {
   line-height: 150%;
   text-align: center;
+  color: #fff;
 }
 p {
   font-style: italic;
@@ -38,11 +45,14 @@ form * {
 }
 
 input,
-select {
-  padding: 1% 2%;
+select,
+textarea {
+  padding: 1em;
   border-style: hidden;
   border-radius: 5px;
   margin-top: 0.5em;
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
 }
 
 div {
@@ -60,9 +70,19 @@ input[type="radio"] {
   margin-right: 5em;
 }
 
-inline-options input {
-  width: 60px;
-  height: 60px;
+input.largeCheckbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 1em;
+}
+
+
+input[type="submit"] {
+  background-color: rgb(90, 211, 100);
+  padding: 1em 2em;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
 }
 
 
