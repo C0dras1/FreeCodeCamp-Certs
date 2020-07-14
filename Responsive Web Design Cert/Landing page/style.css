@@ -21,8 +21,8 @@ body {
   background: linear-gradient(
     rgba(0, 0, 0, 0.3),
     rgba(0, 0, 0, 0.3)
-  ), url("markus-spiske-vrbZVyX2k4I-unsplash.jpg") center fixed;
-  object-fit: cover;
+  ), url("markus-spiske-vrbZVyX2k4I-unsplash.jpg") center no-repeat;
+  object-fit: fill;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
