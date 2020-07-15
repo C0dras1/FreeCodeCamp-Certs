@@ -8,25 +8,71 @@
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
 </head>
 <body>
+
+  <nav id="navbar">
+    <header>CSS Grid Doucmentation</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#Brower-Support">Browser Support</a></li>
+      <li><a class="nav-link" href="#Getting-Started">Getting Started</a></li>
+      <li><a class="nav-link" href="#Grid-Area">Defining a Grid Area</a></li>
+      <li><a class="nav-link" href="#Fractional-Units">Fractional Units</a></li>
+    </ul>
+  </nav>
   <main id="main-doc">
-    <section class="main=section">
-      <header>1</header>
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>CSS Grid (aka "Grid") is arguably the most powerful tool for layouts available in CSS, being a 2-dimensional system, rather than flexbox, which is a 1-dimensional system. CSS Grid allows you to apply CSS rules to both the parent element (Grid Container) and the children elements (Grid Items).</p>
+      <p>Although, Grid is a more powerful tool than Flexbox, using them in conjunction can work very well together. Similarily to Flexbox, the order of HTML elements doesn't matter. You are able to use CSS to place them in any order and in any part of your Grid layout.</p>
+      <p>Grid was created specifically to solve the layout problems web developers until now have been using other tools in 'hacky' ways to get layouts that they want.</p>
     </section>
 
-    <section class="main=section">
-      <header>2</header>
+    <section class="main-section" id="Browser-Support">
+      <header>Browser Support</header>
+      <p>As of March, 2017, most broswers shipped native, unprefixed support for Grid. Internet Explorer 10 and 11 on the other hand support it, but it's an old implementation with outdated syntax (what else is new?).</p>
+      <p>This indicates the browser version that supports the feature at that version and newer.</p>
+      <p><strong>PRO TIP: </strong>Firefox has great inspector tools for developing with Grid. You can toggle a display for each Grid layout on your page, which shows the numbers of the rows and columns for easy visuals.</p>
+      <h4>Desktop</h4>
+      <ul>
+        <li><strong>Chrome:</strong> 57</li>
+        <li><strong>Firefox:</strong> 52</li>
+        <li><strong>Opera:</strong> 44</li>
+        <li><strong>Edge:</strong> 16</li>
+        <li><strong>Safari:</strong> 10.1</li>
+      </ul>
+      <h4>Mobile/ Tablet</h4>
+      <ul>
+        <li><strong>Android Chrome:</strong> 81</li>
+        <li><strong>Android Firefox:</strong> 68</li>
+        <li><strong>Android:</strong> 81</li>
+        <li><strong> iOSSafari:</strong> 10.3</li>
+      </ul>
     </section>
 
-    <section class="main=section">
-      <header>3</header>
+    <section class="main-section" id="Getting-Started">
+      <header>Getting Started</header>
+      <p>To get started you have to define a container element as a grid with <span class="code">display: grid</span>, then you can define the columns and rows with <span class="code">display-template-columns</span> and <span class="code">display-template-rows</span>. Another useful CSS rule to use is <span class="code">grid-gap</span>, which just puts a margin between grid items horizontally and vertically.</p>
+
+      <p>One of the best parts of Grid is making responsive layouts with no media queries! Let me show you the magic...</p>
+
+      <img src="gtc.png" alt="code sample for simple layout with no media queries">
     </section>
 
-    <section class="main=section">
-      <header>4</header>
+    <section class="main-section" id="Grid-Area">
+      <header>Defining a Grid Area</header>
+      <h4>Grid Container</h4>
+      <p>You can define it via the parent by <span class="code">grid-template-areas</span>.</p>
+      <p>Values: </p>
+      <ul>
+        <li><strong>|grid-area-name|</strong> - the name of a grid area specified by the Grid Item's <span class="code">grid-area</span></li>
+        <li><strong>.</strong>  - a period signifies an empty grid cell</li>
+        <li><strong>none</strong> - no grid areas are defined</li>
+      </ul>
+      <img src="container-gta.png" alt="code sample show grid container defining template area">
     </section>
 
-    <section class="main=section">
-      <header>5</header>
+    <section class="main-section" id="Fractional-Units">
+      <header>Fractional Units</header>
     </section>
   </main>
 </body>
