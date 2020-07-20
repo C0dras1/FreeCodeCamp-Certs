@@ -7,16 +7,16 @@
   <title>Technical Documentation Page</title>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
 </head>
-<body>
+<body class="grid-container">
 
   <nav id="navbar">
-    <header>CSS Grid Doucmentation</header>
+    <header>CSS Grid Documentation</header>
     <ul>
       <li><a class="nav-link" href="#Introduction">Introduction</a></li>
-      <li><a class="nav-link" href="#Brower-Support">Browser Support</a></li>
-      <li><a class="nav-link" href="#Getting-Started">Getting Started</a></li>
-      <li><a class="nav-link" href="#Grid-Area">Defining a Grid Area</a></li>
-      <li><a class="nav-link" href="#Fractional-Units">Fractional Units</a></li>
+      <li><a class="nav-link" href="#Browser_Support">Browser Support</a></li>
+      <li><a class="nav-link" href="#Getting_Started">Getting Started</a></li>
+      <li><a class="nav-link" href="#Defining_a_Grid_Area">Defining a Grid Area</a></li>
+      <li><a class="nav-link" href="#Fractional_Units">Fractional Units</a></li>
     </ul>
   </nav>
   <main id="main-doc">
@@ -27,7 +27,7 @@
       <p>Grid was created specifically to solve the layout problems web developers until now have been using other tools in 'hacky' ways to get layouts that they want.</p>
     </section>
 
-    <section class="main-section" id="Browser-Support">
+    <section class="main-section" id="Browser_Support">
       <header>Browser Support</header>
       <p>As of March, 2017, most broswers shipped native, unprefixed support for Grid. Internet Explorer 10 and 11 on the other hand support it, but it's an old implementation with outdated syntax (what else is new?).</p>
       <p>This indicates the browser version that supports the feature at that version and newer.</p>
@@ -49,29 +49,32 @@
       </ul>
     </section>
 
-    <section class="main-section" id="Getting-Started">
+    <section class="main-section" id="Getting_Started">
       <header>Getting Started</header>
       <p>To get started you have to define a container element as a grid with <span class="code">display: grid</span>, then you can define the columns and rows with <span class="code">display-template-columns</span> and <span class="code">display-template-rows</span>. Another useful CSS rule to use is <span class="code">grid-gap</span>, which just puts a margin between grid items horizontally and vertically.</p>
 
       <p>One of the best parts of Grid is making responsive layouts with no media queries! Let me show you the magic...</p>
 
-      <img src="gtc.png" alt="code sample for simple layout with no media queries">
+
+      <img src="gtc.png" alt="responsive grid code snippet">
     </section>
 
-    <section class="main-section" id="Grid-Area">
+    <section class="main-section" id="Defining_a_Grid_Area">
       <header>Defining a Grid Area</header>
       <h4>Grid Container</h4>
-      <p>You can define it via the parent by <span class="code">grid-template-areas</span>.</p>
+      <p>You can define it via the parent by <code>grid-template-areas</code>.</p>
       <p>Values: </p>
       <ul>
-        <li><strong>|grid-area-name|</strong> - the name of a grid area specified by the Grid Item's <span class="code">grid-area</span></li>
-        <li><strong>.</strong>  - a period signifies an empty grid cell</li>
-        <li><strong>none</strong> - no grid areas are defined</li>
+        <li><strong><code>grid-area-name</code></strong> - the name of a grid area specified by the Grid Item's <span class="code">grid-area</span></li>
+        <li><strong><code>.</code></strong>  - a period signifies an empty grid cell</li>
+        <li><strong><code>none</code></strong> - no grid areas are defined</li>
       </ul>
-      <img src="container-gta.png" alt="code sample show grid container defining template area">
+      <img src="container-gta.png" alt="grid template area code snippet">
+
+      <p>Additionally the Grid Item will have to use this property <code>grid-area</code> to define the name of the grid item so that the code above works for the Grid Container.</p>
     </section>
 
-    <section class="main-section" id="Fractional-Units">
+    <section class="main-section" id="Fractional_Units">
       <header>Fractional Units</header>
     </section>
   </main>
